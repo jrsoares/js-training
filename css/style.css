@@ -230,3 +230,31 @@ body {
   }
 
 }
+
+.js-faq-lista dt::after {
+  content: ' ⬎';
+}
+
+.js-faq-lista dt.ativo::after {
+  content: ' ⬏';
+}
+
+.js-faq-lista dd {
+  display: none;
+}
+
+.js-faq-lista dd.ativo {
+ display: block;
+ animation: showAcordion .5s forwards;
+}
+
+@keyframes showAcordion {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}

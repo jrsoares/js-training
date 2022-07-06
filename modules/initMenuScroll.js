@@ -4,10 +4,10 @@ export default function initMenuScroll() {
   function handleMenuScroll(event) {
     const hrefContent = event.currentTarget.getAttribute('href');
     const section = document.querySelector(hrefContent);
-    section.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+    // section.scrollIntoView({
+    //   behavior: 'smooth',
+    //   block: 'start',
+    // });
   }
 
   menuScroll.forEach((item) => {

@@ -22,7 +22,15 @@
   <body>
     <div class="grid-container">
       <nav class="menu js-menu">
-        <ul>
+        <button
+          class="js-menu-mobile"
+          data-menu="button"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          Menu
+        </button>
+        <ul data-menu="lista" id="menu">
           <li><a href="#animais">Animais</a></li>
           <li data-dropdown>
             <a href="#sobre">Sobre</a>
@@ -233,7 +241,6 @@
           <li>Rio de Janeiro - RJ</li>
         </ul>
       </section>
-
       <footer class="copy">
         <p>Todos os direitos reservados.</p>
       </footer>

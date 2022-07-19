@@ -6,7 +6,12 @@ export default function initAnimaSection() {
     sections.forEach((item) => {
       const sectionTop = item.getBoundingClientRect().top;
       const sectionVisible = sectionTop - windowHeigth < 0;
-      sectionVisible && item.classList.add('ativo');
+
+      if (sectionVisible) {
+        item.classList.add('ativo');
+      } else if (item.classList.contains('ativo')) {
+        item.classList.remove('ativo');
+      }
     });
   }
 
